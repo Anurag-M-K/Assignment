@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidebar from './Sidebar'
-function Todo() {
+function Galllery() {
   return (
     <div>
         <Sidebar/>
@@ -8,4 +8,4 @@ function Todo() {
   )
 }
 
-export default Todo
+export default Galllery

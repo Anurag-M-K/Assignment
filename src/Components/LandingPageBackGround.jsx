@@ -1,27 +1,25 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import "./Css/LandingPageBackGround.scss";
 
+import './Css/LandingPageBackground.css'
+import LandingPage from './LandingPage'
 
-function LandingPageBackGround() {
-const {userDetails} = useSelector(state=>state.users)
-  console.log("userdetials ",userDetails)
+const Test = () => {
   return (
-    <>
-      <div className="one">
-        jslkfdaaaaaaaaaaaaaaaaaaaaaaa fasdlfasojthid is sd amrja
-      </div>
-      {/* <div className="two">
-        asjdfokandfansdfla dslfnasdkfnasdfhfklndf sdfaskdsnfjbnfijna
-        ,mmfklndinadfnadskfnlakdmf asdfoadfnasdfjnaidfnakdnfiajdnfd
-      </div> */}
-      <div classNam="curve">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-    </svg>
+    <div >
+    <div class="curved">
+	<h1></h1>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,117.3C384,107,480,53,576,48C672,43,768,85,864,138.7C960,192,1056,256,1152,261.3C1248,267,1344,213,1392,186.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+	<div class="container-box">
+    <LandingPage/>
 </div>
-    </>
-  );
-}
 
-export default LandingPageBackGround;
+
+	
+</div>
+
+<div class="h2s">
+</div>
+    </div>
+  );
+};
+
+export default Test;

@@ -1,0 +1,28 @@
+
+.curved {
+	background: #6a4cf5;;
+	text-align: center;
+	color: white;
+	position: relative;
+}
+.curved h1 {
+	padding: 30px;
+	font-size: 4rem;
+}
+.curved p {
+	padding: 30px;
+}
+.curved svg {
+	display: block;
+}
+.container-box {
+        margin-bottom: 950px;
+	background-color: #fff;
+  height: 426px;
+	
+}
+
+h2 {
+	color: black;
+}
+	

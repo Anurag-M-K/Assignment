@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./Css/LandingPage.css";
 import { setUserDetails } from "../redux/features/usersSlice";
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   const [ userData, setUserData ] = useState([]);
@@ -30,10 +31,12 @@ const LandingPage = () => {
         <div className="card-heading text-dark">Select a User</div>
         <div className="card-scroll" style={{ height: "500px", overflowY: "scroll" }}>
           {userDetails?.users?.map(user => (
-            <div className="user" key={user.id}>
+            
+            <Link style={{ textDecoration: 'none' }} to={`/profile/${user?.id}`} > <div className="user" key={user.id}>
               <img src={user?.profilepicture} alt={user.name} />
               <div className="user-name text-dark">{user.name}</div>
-            </div>
+              
+            </div></Link>
           ))}
         </div>
       </div>

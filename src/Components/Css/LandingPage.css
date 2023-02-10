@@ -3,17 +3,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
     height: 100vh;
   }
   
   .card {
     width: 50%;
     max-width: 500px;
+    min-width: 400px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 20px;
     text-align: center;
+    margin-top: -50%;
+    height: 20rem;
   }
   
   .card-heading {
@@ -34,8 +38,8 @@
   }
   
   .user img {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     border-radius: 25px;
     margin-right: 20px;
   }
@@ -43,3 +47,4 @@
   .user-name {
     font-size: 18px;
   }
+  

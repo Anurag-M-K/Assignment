@@ -4,7 +4,10 @@ import Sidebar from './Sidebar'
 function Posts() {
   return (
     <div>
+   
+
         <Sidebar/>
+      
     </div>
   )
 }

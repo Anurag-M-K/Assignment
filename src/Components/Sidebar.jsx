@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-import CommingSoon from './CommingSoon';
 import { Link }  from 'react-router-dom'
 import './Css/sidebar.css';
-import './Test.scss'
-import Header from './Header';
 
 const sidebar = () => {
   const [activeTab, setActiveTab] = useState('posts');
@@ -55,38 +52,6 @@ const sidebar = () => {
           }} to="/todo" > <h6> To-Do</h6></Link>
         </div>
       </div>
-      <Header/>
-      {/* <div className="tab-content">
-        {activeTab === 'posts' && (
-          <div className="content">
-            <h2>Posts</h2> 
-            <div className='headerLine' ></div>
-            <CommingSoon/>
-
-          </div>
-        )}
-        {activeTab === 'gallery' && (
-          <div className="content">
-            <h2>Gallery</h2>
-            <div className='headerLine' ></div>
-            <CommingSoon/>
-          </div>
-        )}
-        {activeTab === 'profile' && (
-          <div className="content">
-           <span> <h2>Profile</h2></span> 
-            <div className='headerLine' ></div>
-            
-          </div>
-        )}
-        {activeTab === 'todo' && (
-          <div className="content">
-            <h2>To-Do</h2>
-            <div className='headerLine' ></div>
-            <CommingSoon/>
-          </div>
-        )}
-      </div> */}
     
 
     </div>

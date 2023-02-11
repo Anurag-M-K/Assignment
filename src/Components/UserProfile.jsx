@@ -1,24 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Sidebar from './Sidebar'
 import Header from './Header';
-import './Css/UserProfile.css'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { GoogleMap , useLoadScript ,Marker} from '@react-google-maps/api';
+import './Css/UserProfile.css';
 
-function UserProfile() {
-
+function UserProfile({ userId }) {
   const { id } = useParams()
-console.log(id)
-  const { loginUserDetails } = useSelector(state=> state.user)
-  const { isLoaded }= useLoadScript({ googleMapsApiKey:"AIzaSyDRX0D21tjCpNmpABQp8bnfNyA99pscQrM"});
+  const [ user, setUser] = useState([])
 
-  if(!isLoaded) return <div>Loading ...</div>
 
+ 
+    const { loginUserDetails } = useSelector(state=>state.user)
+
+    console.log("user ", [loginUserDetails])
+console.log(loginUserDetails.name)
   return (
     <>
+
   <div className="container-fluid">
     <div className="row">
     
@@ -29,17 +30,18 @@ console.log(id)
       <Header/>
       <Row>
         <Col xs={3} md={3}>
-          <img style={{width:"9rem",height:"9rem"}} src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="sdsdfad" />
-          <h4 className=''>Anurag mk</h4>
-          <h5 className=''>Username  :</h5>
-          <h5 className=''>Email  :</h5>
-          <h5 className=''>Phone  :</h5>
-          <h5 className=''>Website :</h5>
+
+  <img style={{width:"11rem",height:"11rem",borderRadius:"91px"}} src={loginUserDetails?.profilepicture} alt="profilepic" />
+          <h4 >{loginUserDetails.name}</h4>
+          <h6 className='ms-1'>Username  :   {loginUserDetails.username}</h6> 
+          <h6 className='ms-1'>Email  :   {loginUserDetails.email} </h6>
+          <h6 className='ms-1'>Phone  :   {loginUserDetails.phone}</h6>
+          <h6 className='ms-1'>Website :   {loginUserDetails.website}</h6>
           <div className='horizontalLine'></div>  
-          <h5 className='mt-3'>Company</h5>
-          <h5 className='mt-3'>Name : </h5>
-          <h5 className='mt-3'>Catchphrase  :</h5>
-          <h5 className='mt-3'>Bs  :</h5>
+          <h6 className='mt-3 ms-1'>Company</h6>
+          <h6 className='mt-3 ms-1'>Name :    {loginUserDetails?.company?.name}</h6>
+          <h6 className='mt-3 ms-1'>Catchphrase  :   {loginUserDetails?.company?.catchPhrase}</h6>
+          <h6 className='mt-3 ms-1'>Bs  :   {loginUserDetails?.company?.bs}</h6>
         </Col>
         <Col xs={2} md={1}>
 
@@ -49,15 +51,13 @@ console.log(id)
         </Col>
         <Col xs={7} md={8}>
 
-        <h5 className=''>Address        :</h5>
-          <h5 className='ms-3'>Street :</h5>
-          <h5 className='ms-3'>Suit   :</h5>
-          <h5 className='ms-3'>City   :</h5>
-          <h5 className='ms-3'>Zip Code  :</h5>
+        <h6 className=''>Address        :    </h6>
+          <h6 className='ms-3'>Street :   {loginUserDetails?.address?.street}</h6>
+          <h6 className='ms-3'>Suite   :   {loginUserDetails?.address?.suite}</h6>
+          <h6 className='ms-3'>City   :   {loginUserDetails?.address?.city}</h6>
+          <h6 className='ms-3'>Zip Code  :   {loginUserDetails?.address?.zipcode}</h6>
 
-          <GoogleMap zoom={10} cenrer={{lat:-37.3159, lng: 81.1496 }}
-          mapContainerClassName="map-container"
-          ></GoogleMap>
+          
 
         </Col>
       

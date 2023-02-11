@@ -3,33 +3,25 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./Css/LandingPage.css";
 import { setUserDetails } from "../redux/features/usersSlice";
-import { setLoginUserDetails } from "../redux/features/loginUserSlice";
-import { useNavigate , Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-const LandingPage = () => {
+const ChatCard = () => {
   const [ userData, setUserData ] = useState([]);
-  const [user , setUser] = useState("")
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+
   useEffect(() => {
+    console.log("before")
     const getUserData = async () => {
       const data = await axios.get("https://panorbit.in/api/users.json");
+      console.log("fetch dat ",data)
       setUserData(data.data);
       dispatch(setUserDetails(data.data));
     };
     getUserData();
   }, []);
 
-
   const {userDetails} = useSelector(state=>state.users)
-  const handleClick = (id)=>{
-    const loginUser = userDetails.users.filter(user=> user.id === id)[0];
-    dispatch(setLoginUserDetails(loginUser))
-    navigate("/profile")
-
-  }
-  
-
+    
 
   
   return (
@@ -39,11 +31,11 @@ const LandingPage = () => {
         <div className="card-scroll" style={{ height: "500px", overflowY: "scroll" }}>
           {userDetails?.users?.map(user => (
             
-            <div onClick={()=>handleClick(user?.id)} className="user" key={user.id}>
+            <Link style={{ textDecoration: 'none' }} to={`/profile/${user?.id}`} > <div className="user" key={user.id}>
               <img src={user?.profilepicture} alt={user.name} />
               <div className="user-name text-dark">{user.name}</div>
               
-            </div>
+            </div></Link>
           ))}
         </div>
       </div>
@@ -51,4 +43,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default ChatCard;

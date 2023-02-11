@@ -8,13 +8,15 @@ export const userSlice = createSlice({
     },
     reducers:{
         setLoginUserDetails:(state,action)=>{
-
-            state.userDetails =  action.payload
+            
+            state.loginUserDetails =  action.payload
+            console.log("from slice single ",action.userDetails)
 
         }
     }
 })
 
-export const userState = (state)=>state.users;
 
-export const {setLoginUserDetails} = userSlice.actions
+export const {setLoginUserDetails} = userSlice.actions;
+
+export default userSlice.reducer;

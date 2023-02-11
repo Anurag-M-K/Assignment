@@ -71,6 +71,8 @@
 
 h6{
 	margin-left: -4.5rem;
+	color: #fff;
+
 }
 /* .content{
 	display: flex;
@@ -90,5 +92,6 @@ h1{
 .content{
 	display: inline;
 }
-
-  
+.side-tabs{
+	padding: rem;
+}

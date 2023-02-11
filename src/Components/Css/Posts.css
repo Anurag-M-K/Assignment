@@ -1,3 +1,9 @@
 .container-posts{
     display: flex;
 }
+.coming-soon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

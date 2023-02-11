@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import "./Css/LandingPage.css";
+// import "./Css/ChatCard.css";
 import { setUserDetails } from "../redux/features/usersSlice";
 import { Link } from 'react-router-dom';
+import './Css/ChatCard.css'
+
 
 const ChatCard = () => {
   const [ userData, setUserData ] = useState([]);
@@ -26,16 +28,16 @@ const ChatCard = () => {
   
   return (
     <div className="card-container">
-      <div className="card">
-        <div className="card-heading text-dark">Select a User</div>
+      <div className="card" style={{marginTop:"0"}}>
+        <div className="card-heading bg-primary text-dark">Select a User</div>
         <div className="card-scroll" style={{ height: "500px", overflowY: "scroll" }}>
           {userDetails?.users?.map(user => (
             
-            <Link style={{ textDecoration: 'none' }} to={`/profile/${user?.id}`} > <div className="user" key={user.id}>
+            <div className="user" key={user.id}>
               <img src={user?.profilepicture} alt={user.name} />
               <div className="user-name text-dark">{user.name}</div>
               
-            </div></Link>
+            </div>
           ))}
         </div>
       </div>

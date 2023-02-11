@@ -24,14 +24,12 @@
    padding-top: 1%;
  }
  .content{
-  /* margin-top: -25%; */
   width: 82%;
   display: flex;
  
   flex-direction: row;
 
   
-  /* margin-top: -47%; */
   
  }
 .container{display: flex;}
@@ -51,7 +49,7 @@
 	display: inline;
 }
 .headerLine{
-	width: 100%;
+	width: 67vw;
 	height: 1px;
 	background: rgb(215, 211, 211);
   
@@ -67,4 +65,7 @@
   padding-left: 40%;
 
 
+}
+.text-dark{
+  cursor: pointer;
 }

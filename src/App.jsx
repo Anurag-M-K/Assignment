@@ -8,6 +8,7 @@ import GalleryPage from './Pages/GalleryPage';
 import ProfilePge from './Pages/ProfilePge';
 import ProfileCard from './Components/ProfileCard';
 import ChatCard from './Components/ChatCard';
+import Map from './Components/Map';
 function App() {
 
 
@@ -24,6 +25,7 @@ function App() {
 
     <Route exact path='/card' element={<ProfileCard/>}/>
     <Route exact path='/chat' element={<ChatCard/>}/>
+    <Route exact path='/map' element={<Map/>}/>
     
    </Routes>
    </BrowserRouter> 

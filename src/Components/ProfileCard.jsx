@@ -6,8 +6,8 @@ import './Css/ProfileCard.css';
 function ProfileCard() {
   const { loginUserDetails } = useSelector(state=>state.user)
   const navigate = useNavigate()
-
-
+  const { userDetails } = useSelector(state=>state.users)
+  console.log("from profile ",userDetails)
   const signout = ()=>{
     //clear  localstorage,jwt here
 
@@ -27,15 +27,18 @@ function ProfileCard() {
 
     <h6 className='text-center ps-5 '>{loginUserDetails?.email}</h6>
     <div className='crossLine'></div>
-    <div style={{ display: 'flex', alignItems: 'center',justifyContent:"center" }}>
-      <img style={{width:"25px" , height:"25px"}} src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="Your Image" />
-      <span style={{ marginLeft: '10px' }}>Your Name</span>
-    </div>
-    <div className='crossLine'></div>
-    <div style={{ display: 'flex', alignItems: 'center',justifyContent:"center" }}>
-      <img style={{width:"25px" , height:"25px"}} src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="Your Image" />
-      <span style={{ marginLeft: '10px' }}>Your Name</span>
-    </div>
+    <div className="card-scroll" style={{ height: "100px", overflowY: "scroll" }}>
+      {/* <div className='crossLine    '  ></div> */}
+          {userDetails?.users?.map(user => (
+            
+            <div className="user" key={userDetails?.id}>
+              <img style={{width:"25px", height:"25px",marginLeft:"5px"}} src={user?.profilepicture} alt="55" />
+              <div className="user-name text-dark">{user?.name}</div>
+              
+            </div>
+          ))}
+        </div>
+    
 </div>
 <div className='btn-Div'>
 

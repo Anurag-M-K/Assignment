@@ -1,24 +1,24 @@
-
+/* 
 .card-container {
     display: flex;
     justify-content: center;
     align-items: center;
     
-    height: 100vh;
+    height: 150px;
   }
   
   .card {
-    width: 50%;
-    max-width: 500px;
-    min-width: 400px;
+    width: 20%;
+    place-self: flex-start;
+    border: 1px solid blue;
+    max-width: 250px;
+    min-width: 200px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 25px;
+    border-radius: 15px;
     padding: 20px;
     text-align: center;
-    /* margin-top: -0%; */
     height: 20rem;
-    margin-top: 34%;
   }
   
   .card-heading {
@@ -46,6 +46,6 @@
   }
   
   .user-name {
-    font-size: 18px;
+    font-size: 14px;
   }
-  
+   */

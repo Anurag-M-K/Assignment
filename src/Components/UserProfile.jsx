@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import './Css/UserProfile.css';
+import Map from './Map';
 
 function UserProfile({ userId }) {
   const { id } = useParams()
@@ -33,15 +34,15 @@ console.log(loginUserDetails.name)
 
   <img style={{width:"11rem",height:"11rem",borderRadius:"91px"}} src={loginUserDetails?.profilepicture} alt="profilepic" />
           <h4 >{loginUserDetails.name}</h4>
-          <h6 className='ms-1'>Username  :   {loginUserDetails.username}</h6> 
-          <h6 className='ms-1'>Email  :   {loginUserDetails.email} </h6>
-          <h6 className='ms-1'>Phone  :   {loginUserDetails.phone}</h6>
-          <h6 className='ms-1'>Website :   {loginUserDetails.website}</h6>
+          <h6 className='ms-1'>Username  :  <span className='text-dark'> {loginUserDetails.username}</span></h6> 
+          <h6 className='ms-1'>Email  : <span className='text-dark'> {loginUserDetails.email}</span>  </h6>
+          <h6 className='ms-1'>Phone  :  <span className='text-dark'> {loginUserDetails.phone}</span></h6>
+          <h6 className='ms-1'>Website :  <span className='text-dark'> {loginUserDetails.website}</span></h6>
           <div className='horizontalLine'></div>  
           <h6 className='mt-3 ms-1'>Company</h6>
-          <h6 className='mt-3 ms-1'>Name :    {loginUserDetails?.company?.name}</h6>
-          <h6 className='mt-3 ms-1'>Catchphrase  :   {loginUserDetails?.company?.catchPhrase}</h6>
-          <h6 className='mt-3 ms-1'>Bs  :   {loginUserDetails?.company?.bs}</h6>
+          <h6 className='mt-3 ms-1'>Name :    <span className='text-dark'>{loginUserDetails?.company?.name}</span></h6>
+          <h6 className='mt-3 ms-1'>Catchphrase  :  <span className='text-dark'> {loginUserDetails?.company?.catchPhrase}</span></h6>
+          <h6 className='mt-3 ms-1'>Bs  :   <span className='text-dark'>{loginUserDetails?.company?.bs}</span></h6>
         </Col>
         <Col xs={2} md={1}>
 
@@ -52,12 +53,13 @@ console.log(loginUserDetails.name)
         <Col xs={7} md={8}>
 
         <h6 className=''>Address        :    </h6>
-          <h6 className='ms-3'>Street :   {loginUserDetails?.address?.street}</h6>
-          <h6 className='ms-3'>Suite   :   {loginUserDetails?.address?.suite}</h6>
-          <h6 className='ms-3'>City   :   {loginUserDetails?.address?.city}</h6>
-          <h6 className='ms-3'>Zip Code  :   {loginUserDetails?.address?.zipcode}</h6>
+          <h6 className='ms-3'>Street :   <span className='text-dark'>{loginUserDetails?.address?.street}</span></h6>
+          <h6 className='ms-3'>Suite   :   <span className='text-dark'>{loginUserDetails?.address?.suite}</span></h6>
+          <h6 className='ms-3'>City   :   <span className='text-dark'>{loginUserDetails?.address?.city}</span></h6>
+          <h6 className='ms-3'>Zip Code  :   <span className='text-dark'>{loginUserDetails?.address?.zipcode}</span></h6>
 
           
+        <Map/>
 
         </Col>
       
@@ -67,9 +69,7 @@ console.log(loginUserDetails.name)
     
 
       </div>
-      <div className="col-md-3">
-        
-      </div>
+   
     </div>
   </div>
     </>

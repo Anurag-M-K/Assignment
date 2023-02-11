@@ -28,11 +28,18 @@ if(profileCard===false){
         <div className="content">
           <div className="container">
 
-          <div className="col-md-10">
+          <div className="col-md-11">
           <div className="txt"><h5>{routeName}</h5></div>
 
           </div>
-          <div className="col-md-2"><span onClick={activatingCard}> <h6 className="text-dark">{loginUserDetails?.name}</h6></span></div>
+          {/* <div className="col-md-2"><span onClick={activatingCard}> <h6 className="text-dark">{loginUserDetails?.name}</h6></span></div> */}
+
+
+          <div onClick={activatingCard} className=" col-md-1 user" key={loginUserDetails?.id}>
+              <img style={{width:"40px", height:"40px",marginLeft:"5px"}} src={loginUserDetails?.profilepicture} alt="55" />
+              <div className="user-name text-dark">{loginUserDetails?.name}</div>
+              
+            </div>
           </div>
           <div className="headerLine"></div>
         </div>

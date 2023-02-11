@@ -1,0 +1,10 @@
+.map-container{
+    width: 43vw;
+    height: 57vh;
+    padding-top: 25vh;
+    border-radius: 25px;
+}
+.latLong{
+    flex-direction: column;
+    margin-left: 65vh;
+}

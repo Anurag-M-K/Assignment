@@ -21,8 +21,7 @@ const LandingPage = () => {
   }, []);
 
   const {userDetails} = useSelector(state=>state.users)
-  console.log("data ",userData)
-  console.log("slice ",userDetails)
+    
 
   
   return (

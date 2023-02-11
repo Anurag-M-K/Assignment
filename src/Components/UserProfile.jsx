@@ -1,13 +1,22 @@
 import React from 'react'
 import Sidebar from './Sidebar'
-import Card from 'react-bootstrap/Card'; 
 import Header from './Header';
 import './Css/UserProfile.css'
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { GoogleMap , useLoadScript ,Marker} from '@react-google-maps/api';
 
 function UserProfile() {
+
+  const { id } = useParams()
+console.log(id)
+  const { loginUserDetails } = useSelector(state=> state.user)
+  const { isLoaded }= useLoadScript({ googleMapsApiKey:"AIzaSyDRX0D21tjCpNmpABQp8bnfNyA99pscQrM"});
+
+  if(!isLoaded) return <div>Loading ...</div>
+
   return (
     <>
   <div className="container-fluid">
@@ -45,6 +54,10 @@ function UserProfile() {
           <h5 className='ms-3'>Suit   :</h5>
           <h5 className='ms-3'>City   :</h5>
           <h5 className='ms-3'>Zip Code  :</h5>
+
+          <GoogleMap zoom={10} cenrer={{lat:-37.3159, lng: 81.1496 }}
+          mapContainerClassName="map-container"
+          ></GoogleMap>
 
         </Col>
       

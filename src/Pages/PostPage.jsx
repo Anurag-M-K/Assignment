@@ -4,6 +4,8 @@ import "../Components/Css/Posts.css";
 
 import Posts from "../Components/Posts";
 import ChatCard from "../Components/ChatCard";
+import PrivateMessage from "../Components/PrivateMessage";
+import './css/ProfilePage.css'
 
 function PostPage() {
   return (
@@ -26,10 +28,16 @@ function PostPage() {
             Coming soon
           </h1>
         </div>
-        <ChatCard/>
+      
        
+      <div className="chat-btn">
+
+<ChatCard/>
+</div>
       </div>
+
     </div>
+    
   );
 }
 

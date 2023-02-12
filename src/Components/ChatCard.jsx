@@ -5,6 +5,8 @@ import { setCard } from "../redux/features/chatCardSlice";
 import { setMessageCard } from "../redux/features/privateCardStateSlice";
 import { setPrivateChat } from "../redux/features/privateChatSlice";
 import { setUserDetails } from "../redux/features/usersSlice";
+import { IoChatboxOutline } from "react-icons/io5";
+import { IoChevronDown } from "react-icons/io5";
 import "./Css/ChatCard.css";
 
 const ChatCard = () => {
@@ -59,13 +61,13 @@ const ChatCard = () => {
           <div className="chat-card">
             <div
               onClick={handleClick}
-              className="chat-card-heading bg-primary text-light"
+              className="chat-card-heading bg-primary text-light  "
             >
-              <button className="btn btn-primary btn-chat">Chats</button>
+              <button className="btn btn-primary btn-chat text-start ">{<IoChatboxOutline className="me-2"  />}Chats</button>
             </div>
             <div
               className="chat-card-scroll"
-              style={{ height: "200px", overflowY: "scroll" }}
+              style={{ height: "46vh", overflowY: "scroll" }}
             >
               {friendsData?.map((user) => (
                 <div onClick={()=>privateChatClick(user?.id)} className="user" key={user.id}>

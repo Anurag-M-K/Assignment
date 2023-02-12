@@ -1,38 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import "./Css/UserProfile.css";
 import Map from "./Map";
-import { setCard } from "../redux/features/chatCardSlice";
 
-function UserProfile({ userId }) {
+function UserProfile() {
   const { id } = useParams();
-  const [user, setUser] = useState([]);
-  const dispatch = useDispatch();
-  const { cardState } = useSelector((state) => state.chatCard);
 
   const { loginUserDetails } = useSelector((state) => state.user);
 
-  const handleClick = () => {
-    if (cardState === false) {
-      dispatch(setCard(true));
-    }
-  };
+
   return (
     <>
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-3">
+            
             <Sidebar />
           </div>
           <div className="col-md-9">
             <Header />
             <Row>
-              <Col xs={3} md={3}>
+              <Col xs={3} md={3} className="image-part">
                 <img
                   style={{
                     width: "11rem",
@@ -87,7 +80,7 @@ function UserProfile({ userId }) {
               <Col xs={2} md={1}>
                 <div className="middleLine"></div>
               </Col>
-              <Col xs={7} md={8}>
+              <Col xs={7} md={8} className="address-part">
                 <h6 className="">Address : </h6>
                 <h6 className="ms-3">
                   Street :{" "}

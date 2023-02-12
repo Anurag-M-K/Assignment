@@ -9,7 +9,7 @@ function Map() {
     googleMapsApiKey: "AIzaSyDRXOD21tjCpNmpABQp8bnfNyA99pscQrM",
   });
 
-  if (!isLoaded) return <div>Loading...</div>;
+  if (!isLoaded) return <div className="loading">Loading...</div>;
 
   return (
     <>

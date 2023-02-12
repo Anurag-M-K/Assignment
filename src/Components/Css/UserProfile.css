@@ -61,3 +61,19 @@ h5{
     width: 40vw;
     height: 30vh;
 }
+@media screen and (max-width:1010px) {
+    .middleLine{
+        display: none;
+    }
+    .image-part{
+        display: row;
+        align-items: center;
+        justify-content: center;
+    }
+ 
+    .map{
+        display: none;
+        flex-direction: row;
+    }
+    
+}

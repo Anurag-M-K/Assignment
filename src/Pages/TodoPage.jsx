@@ -3,6 +3,8 @@ import Header from "../Components/Header";
 import Sidebar from "../Components/Sidebar";
 import "../Components/Css/Todo.css";
 import ChatCard from "../Components/ChatCard";
+import PrivateMessage from "../Components/PrivateMessage";
+import './css/ProfilePage.css'
 function TodoPage() {
   return (
     <div className="container-todo">
@@ -24,8 +26,12 @@ function TodoPage() {
             Coming soon
           </h1>
         </div>
-        <ChatCard/>
+      <div className="chat-btn">
+
+<ChatCard/>
+</div>
       </div>
+
     </div>
   );
 }

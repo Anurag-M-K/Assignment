@@ -10,6 +10,7 @@ function GalleryPage() {
   const { cardState } = useSelector(state=>state.chatCard)
 
   return (
+    <>
     <div className="container-gallery">
       <div className="col-md-3">
         <Sidebar />
@@ -27,12 +28,21 @@ function GalleryPage() {
             }}
           >
             Coming soon
+
           </h1>
         </div>
+      <div className="chat-btn">
+
         <ChatCard/>
       </div>
+       
+
+      </div>
+    
 
     </div>
+      
+    </>
   );
 }
 

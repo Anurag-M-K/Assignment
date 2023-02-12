@@ -8,3 +8,8 @@
     flex-direction: column;
     margin-left: 65vh;
 }
+.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

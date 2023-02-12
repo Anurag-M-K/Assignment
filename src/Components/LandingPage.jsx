@@ -30,13 +30,14 @@ const LandingPage = () => {
 
   return (
     <div className="card-container">
-      <div className="card">
-        <div className="card-heading text-dark">Select a User</div>
+      <div className="cards">
+        <div className="card-heading text-dark" >Select an user</div>
         <div
           className="card-scroll"
-          style={{ height: "500px", overflowY: "scroll" }}
+          style={{ height: "407px", overflowY: "scroll" }}
         >
           {userDetails?.users?.map((user) => (
+            
             <div
               onClick={() => handleClick(user?.id)}
               className="user"
@@ -44,7 +45,9 @@ const LandingPage = () => {
             >
               <img src={user?.profilepicture} alt={user.name} />
               <div className="user-name text-dark"><h6 className="username">{user.name}</h6></div>
+              
             </div>
+          
           ))}
         </div>
       </div>

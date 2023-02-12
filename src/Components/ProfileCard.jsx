@@ -1,13 +1,14 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { setLoginUserDetails } from "../redux/features/loginUserSlice";
 import "./Css/ProfileCard.css";
 
 function ProfileCard() {
   const { loginUserDetails } = useSelector((state) => state.user);
   const navigate = useNavigate();
   const { userDetails } = useSelector((state) => state.users);
-
+const dispatch = useDispatch()
   const signout = () => {
     //clearing localstorage,jwt code  here
 
@@ -16,8 +17,11 @@ function ProfileCard() {
 
   //filter the array for exlcuding login user
   const excludedValue = loginUserDetails.name
-  const friendsData = userDetails.users.filter(value => value.name !==excludedValue)
+  const otherUser = userDetails.users.filter(value => value.name !==excludedValue)
   
+  const changeUser = (user) =>{
+    dispatch(setLoginUserDetails(user))
+  }
   return (
     <div>
       <div className="container-card">
@@ -34,8 +38,8 @@ function ProfileCard() {
               className="card-scroll"
               style={{ height: "100px", overflowY: "scroll" }}
             >
-              {friendsData?.map((user) => (
-                <div className="user" key={friendsData?.id}>
+              {otherUser?.map((user) => (
+                <div className="user" onClick={()=>changeUser(user)} key={otherUser?.id}>
                   <img
                     style={{ width: "25px", height: "25px", marginLeft: "5px" }}
                     src={user?.profilepicture}

@@ -7,17 +7,17 @@
     height: 100vh;
   }
   
-  .card {
+  .cards {
     width: 50%;
     max-width: 500px;
     min-width: 400px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 42px;
+    border-radius: 35px;
     padding: 20px;
     text-align: center;
     margin-top: -50%;
-    height: 20rem;
+    /* height: 20rem; */
   }
   
   .card-heading {
@@ -26,10 +26,7 @@
     margin-bottom: 20px;
   }
   
-  .card-scroll {
-    height: 500px;
-    overflow-y: scroll;
-  }
+  
   
   .user {
     display: flex;

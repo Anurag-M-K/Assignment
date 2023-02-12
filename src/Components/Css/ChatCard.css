@@ -1,34 +1,45 @@
-/* 
-.card-container {
+
+.chat-card-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
+    position: absolute;
+    margin-top: 11%;
+    margin-left: 34%;
     
-    height: 150px;
   }
   
-  .card {
+  .chat-card {
     width: 20%;
-    place-self: flex-start;
-    border: 1px solid blue;
+    border: 1px solid rgb(66, 66, 240);
     max-width: 250px;
-    min-width: 200px;
+    min-width: 220px;
+
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    padding: 20px;
+    padding-left:0px;
+    padding-top:10px;
+    padding-right:10px;
     text-align: center;
-    height: 20rem;
+    height: 280px;
   }
   
-  .card-heading {
-    font-size: 22px;
+  .chat-card-heading {
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 20px;
-  }
   
-  .card-scroll {
-    height: 500px;
+    margin-top: -9px;
+    border-radius: 11px;
+    
+  }
+  .btn-chat{
+    width: 218px;
+    
+  }
+  .chat-card-scroll {
+    height:289px;
     overflow-y: scroll;
   }
   
@@ -48,4 +59,4 @@
   .user-name {
     font-size: 14px;
   }
-   */
+  

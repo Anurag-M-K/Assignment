@@ -1,15 +1,16 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import "./Css/ChatCard.css";
+import { setCard } from "../redux/features/chatCardSlice";
 import { setUserDetails } from "../redux/features/usersSlice";
-import { Link } from 'react-router-dom';
 import './Css/ChatCard.css'
 
 
 const ChatCard = () => {
   const [ userData, setUserData ] = useState([]);
   const dispatch = useDispatch();
+const { cardState } = useSelector(state=>state.chatCard)
+console.log('fom mishdul ',cardState)
 
   useEffect(() => {
     console.log("before")
@@ -23,14 +24,16 @@ const ChatCard = () => {
   }, []);
 
   const {userDetails} = useSelector(state=>state.users)
-    
+    const handleClick = ()=>{
+     dispatch(setCard(false))
+    }
 
   
-  return (
-    <div className="card-container">
-      <div className="card" style={{marginTop:"0"}}>
-        <div className="card-heading bg-primary text-dark">Select a User</div>
-        <div className="card-scroll" style={{ height: "500px", overflowY: "scroll" }}>
+  return (  
+    <div className="chat-card-container">
+      <div className="chat-card" >
+        <div  onClick={handleClick} className="chat-card-heading bg-primary text-light"><button className="btn btn-primary btn-chat">Chats</button></div>
+        <div className="chat-card-scroll" style={{ height: "200px", overflowY: "scroll" }}>
           {userDetails?.users?.map(user => (
             
             <div className="user" key={user.id}>

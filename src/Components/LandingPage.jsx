@@ -4,13 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 import "./Css/LandingPage.css";
 import { setUserDetails } from "../redux/features/usersSlice";
 import { setLoginUserDetails } from "../redux/features/loginUserSlice";
-import { useNavigate , Link } from 'react-router-dom'
+import { useNavigate, Link } from "react-router-dom";
 
 const LandingPage = () => {
-  const [ userData, setUserData ] = useState([]);
-  const [user , setUser] = useState("")
+  const [userData, setUserData] = useState([]);
+  const [user, setUser] = useState("");
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
   useEffect(() => {
     const getUserData = async () => {
       const data = await axios.get("https://panorbit.in/api/users.json");
@@ -20,29 +21,29 @@ const LandingPage = () => {
     getUserData();
   }, []);
 
+  const { userDetails } = useSelector((state) => state.users);
+  const handleClick = (id) => {
+    const loginUser = userDetails.users.filter((user) => user.id === id)[0];
+    dispatch(setLoginUserDetails(loginUser));
+    navigate("/profile");
+  };
 
-  const {userDetails} = useSelector(state=>state.users)
-  const handleClick = (id)=>{
-    const loginUser = userDetails.users.filter(user=> user.id === id)[0];
-    dispatch(setLoginUserDetails(loginUser))
-    navigate("/profile")
-
-  }
-  
-
-
-  
   return (
     <div className="card-container">
       <div className="card">
         <div className="card-heading text-dark">Select a User</div>
-        <div className="card-scroll" style={{ height: "500px", overflowY: "scroll" }}>
-          {userDetails?.users?.map(user => (
-            
-            <div onClick={()=>handleClick(user?.id)} className="user" key={user.id}>
+        <div
+          className="card-scroll"
+          style={{ height: "500px", overflowY: "scroll" }}
+        >
+          {userDetails?.users?.map((user) => (
+            <div
+              onClick={() => handleClick(user?.id)}
+              className="user"
+              key={user.id}
+            >
               <img src={user?.profilepicture} alt={user.name} />
-              <div className="user-name text-dark">{user.name}</div>
-              
+              <div className="user-name text-dark"><h6 className="username">{user.name}</h6></div>
             </div>
           ))}
         </div>

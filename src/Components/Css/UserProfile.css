@@ -57,3 +57,7 @@ h5{
     align-items: end;
     justify-content: end;
 }
+.map{
+    width: 40vw;
+    height: 30vh;
+}

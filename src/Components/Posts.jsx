@@ -6,8 +6,7 @@ function Posts() {
     <div>
 
         <Sidebar/>
-      
-      
+     
     </div>
   )
 }

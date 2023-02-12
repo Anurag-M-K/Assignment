@@ -1,0 +1,16 @@
+.profile-page{
+    display: flex;
+}
+.card-div{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    position:absolute;
+
+}
+.privateMessageCard{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    position:absolute;
+}

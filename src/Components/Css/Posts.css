@@ -7,3 +7,8 @@
     align-items: center;
     
 }
+.button-component{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}

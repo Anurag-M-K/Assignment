@@ -6,11 +6,10 @@ import PostPage from './Pages/PostPage';
 import TodoPage from './Pages/TodoPage';
 import GalleryPage from './Pages/GalleryPage';
 import ProfilePge from './Pages/ProfilePge';
-import ProfileCard from './Components/ProfileCard';
-import ChatCard from './Components/ChatCard';
-import Map from './Components/Map';
-function App() {
+import PrivateMessage from './Components/PrivateMessage';
 
+
+function App() {
 
   return (
    <>
@@ -22,11 +21,7 @@ function App() {
     <Route exact path='/posts' element={<PostPage/>}/>
     <Route exact path='/gallery' element={<GalleryPage/>}/>
     <Route exact path='/todo' element={<TodoPage/>}/>
-
-    <Route exact path='/card' element={<ProfileCard/>}/>
-    <Route exact path='/chat' element={<ChatCard/>}/>
-    <Route exact path='/map' element={<Map/>}/>
-    
+    <Route exact path='/pchat' element={<PrivateMessage/>}/>
    </Routes>
    </BrowserRouter> 
    

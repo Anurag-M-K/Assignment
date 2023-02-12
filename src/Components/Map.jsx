@@ -8,16 +8,25 @@ function Map() {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyDRXOD21tjCpNmpABQp8bnfNyA99pscQrM",
   });
+
   if (!isLoaded) return <div>Loading...</div>;
 
   return (
     <>
-      <GoogleMap
+      {/* <GoogleMap
         zoom={10}
-        center={{ lat: 44, lng: -80 }}
+        center={{
+          lat: loginUserDetails?.address?.geo?.lat,
+          lng: loginUserDetails?.address?.geo?.lng,
+        }}
         mapContainerClassName="map-container"
       >
-        <Marker position={{ lat: 44, lng: -80 }} />
+        <Marker
+          position={{
+            lat: loginUserDetails?.address?.geo?.lat,
+            lng: loginUserDetails?.address?.geo?.lng,
+          }}
+        />
       </GoogleMap>
       <div className="latLong">
         <p>
@@ -25,7 +34,17 @@ function Map() {
           {loginUserDetails?.address?.geo?.lng}
         </p>
         <p></p>
-      </div>
+      </div> */}
+      <img style={{width:"inherit",    borderRadius:" 29px"}} src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/idL4G10Bsh.k/v0/1200x-1.png" alt="" />
+    <div className="col md-3" style={{marginLeft:"370 px",flexDirection:"row"}}>
+    <div
+            
+              className="user"
+            >
+              <p style={{marginLeft:"375px"}}>Lat : </p><p style={{fontWeight:"bold",fontSize:"15px" , color:"grey",marginLeft:"7px"}}>37.8457</p> <p className="ms-2">Lang :  </p>  <p style={{fontWeight:"bold",fontSize:"15px" , color:"grey",marginLeft:"7px"}}>84.6478</p>
+              <div className="user-name text-dark"><h6 className="username"></h6></div>
+            </div>
+    </div>
     </>
   );
 }

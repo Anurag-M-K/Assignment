@@ -13,7 +13,7 @@
     min-width: 400px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 25px;
+    border-radius: 42px;
     padding: 20px;
     text-align: center;
     margin-top: -50%;
@@ -48,4 +48,7 @@
   .user-name {
     font-size: 18px;
   }
-  
+  .username{
+    color: black;
+    margin-left: 0;
+  }

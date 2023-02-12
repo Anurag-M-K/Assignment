@@ -1,5 +1,5 @@
 
-.chat-card-container {
+.privateChat-card-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,7 +10,7 @@
     
   }
   
-  .chat-card {
+  .privateChat-card {
     width: 20%;
     border: 1px solid rgb(66, 66, 240);
     max-width: 250px;
@@ -35,23 +35,25 @@
     margin-top: 0px;
     border-radius: 5px;    
   }
-  .btn-chat{
+  .btn-message{
     width: 218px;
+    height: 47px;
     
   }
  
-  .chat-card-scroll {
+  .message-card-scroll {
     height:289px;
     overflow-y: scroll;
   }
   
-  .user {
+  .user-message-card {
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    align-items: start;
+    
+    margin-bottom: 2px;
   }
   
-  .user img {
+  .user-message-card img {
     width: 35px;
     height: 35px;
     border-radius: 25px;
@@ -60,8 +62,13 @@
   
   .user-name {
     font-size: 14px;
+    align-items: center;
+    justify-content: center;
   }
   .btn-card-visible{
     margin-left: 26vw;
   
+  }
+  .messages{
+    font-size: small;
   }

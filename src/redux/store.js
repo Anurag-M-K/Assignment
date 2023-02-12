@@ -5,7 +5,8 @@ import { combineReducers } from "@reduxjs/toolkit";
 import {persistReducer} from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { cardSlice } from "./features/chatCardSlice";
-
+import { privateChatSlice } from "./features/privateChatSlice";
+import { privateMessageSlice } from './features/privateCardStateSlice'
 
 const persistConfig = {
     key:"root",
@@ -16,7 +17,9 @@ const persistConfig = {
 const reducer = combineReducers({
     users:usersSlice.reducer,
     user:userSlice.reducer,
-    chatCard : cardSlice.reducer
+    chatCard : cardSlice.reducer,
+    privateChat : privateChatSlice.reducer,
+    messageCard : privateMessageSlice.reducer,
 })
 
 const persistedReducer = persistReducer(persistConfig,reducer);

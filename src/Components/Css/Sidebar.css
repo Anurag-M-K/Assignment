@@ -57,10 +57,10 @@
   .tab:hover::after {
 	visibility: visible;
   }
-  .line{
+  .lines{
 	width: 150px;
 	height: 1px;
-	background: #fff;
+	background: #c2c7d0;
   }
 
   h2{
@@ -74,14 +74,6 @@ h6{
 	color: #fff;
 
 }
-/* .content{
-	display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15%;
-} */
-
-
 h1{
 	font-weight: bold;
 }
@@ -93,5 +85,13 @@ h1{
 	display: inline;
 }
 .side-tabs{
-	padding: rem;
+	padding:5rem;
 }
+			/* .sidebar-tab:hover{
+				width: 100px;
+				background-color: #215ddf;
+			}
+			.sidebar-tab:active{
+				width: 150px;
+				background-color: #208feb;
+			} */

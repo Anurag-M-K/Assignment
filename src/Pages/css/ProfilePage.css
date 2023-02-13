@@ -14,3 +14,10 @@
     align-items: end;
     position:absolute;
 }
+.outer-div-chatCard{
+    width: 46%;
+}
+
+.posts-outer-div-chatCard{
+margin-top: 16%;
+}

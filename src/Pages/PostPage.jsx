@@ -16,13 +16,16 @@ function PostPage() {
       <div className="col-md-9">
         <Header />
         <div className="coming-soon">
-          <h1
+             
+              <div className="posts-outer-div-chatCard">
+            
+            <ChatCard/>
+            </div>
+          <h1 
             style={{
-              marginTop: "14%",
               fontWeight: "bold",
               color: "#dddd",
               fontSize: "70px",
-              marginRight: "200px",
             }}
           >
             Coming soon
@@ -30,13 +33,14 @@ function PostPage() {
         </div>
       
        
-      <div className="chat-btn">
-
-<ChatCard/>
-</div>
       </div>
 
+      <div className="col-md-10 privateMessageCard">
+<PrivateMessage/>
+
+</div>
     </div>
+    
     
   );
 }

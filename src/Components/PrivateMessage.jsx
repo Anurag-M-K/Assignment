@@ -20,10 +20,17 @@ const PrivateMessage = () => {
       {messageCardState ? (
         <div className="privateChat-card-container">
           <div className="privateChat-card">
-            <div className="chat-card-heading bg-primary text-light">
+            <div className="chat-card-heading    text-light">
               <button
                 onClick={messageHide}
                 className="btn btn-primary btn-message"
+                style={{
+                  borderBottomRightRadius: "0px",
+                  width: "100%",
+                  borderTopRightRadius: "14px",
+                  borderTopLeftRadius: "14px",
+                  borderBottomLeftRadius: "0px"
+                }}
               >
                 {" "}
                 <div className="user">
@@ -48,52 +55,52 @@ const PrivateMessage = () => {
                 marginLeft: "25px"
               }}
             >
-              <div className="user-message-card bg-secondary me-2">
+              <div className="user-message-card  me-2">
                 <small>Hit how are you?</small>
                 <div className="user-name text-dark"></div>
               </div>
               <div>
-                <small className="align-items-end justify-content-end bg-secondary me-2">
+                <small className="align-items-end justify-content-end  me-2">
                   fine thanks..
                 </small>
               </div>
 
-              <div className="user bg-secondary me-2">
+              <div className="user  me-2">
                 <small>Hit how are you?</small>
                 <div className="user-name text-dark"></div>
               </div>
               <div>
-                <small className="align-items-end justify-content-end bg-secondary me-2">
+                <small className="align-items-end justify-content-end  me-2">
                   fine thanks..
                 </small>
               </div>
 
-              <div className="user bg-secondary me-2">
+              <div className="user  me-2">
                 <small>Hit how are you?</small>
                 <div className="user-name text-dark"></div>
               </div>
               <div>
-                <small className="align-items-end justify-content-end bg-secondary me-2">
+                <small className="align-items-end justify-content-end  me-2">
                   fine thanks..
                 </small>
               </div>
 
-              <div className="user bg-secondary me-2">
+              <div className="user  me-2">
                 <small>Hit how are you?</small>
                 <div className="user-name text-dark"></div>
               </div>
               <div>
-                <small className="align-items-end justify-content-end bg-secondary me-2">
+                <small className="align-items-end justify-content-end  me-2">
                   fine thanks..
                 </small>
               </div>
 
-              <div className="user bg-secondary me-2">
+              <div className="user  me-2">
                 <small>Hit how are you?</small>
                 <div className="user-name text-dark"></div>
               </div>
               <div>
-                <small className="align-items-end justify-content-end bg-secondary me-2">
+                <small className="align-items-end justify-content-end  me-2">
                   fine thanks..
                 </small>
               </div>

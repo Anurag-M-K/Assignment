@@ -31,17 +31,18 @@ const LandingPage = () => {
   return (
     <div className="card-container">
       <div className="cards">
-        <div className="card-heading text-dark" >Select an user</div>
+        <div className="card-heading text-dark" >
+         <div className="top-header"><h5> Select an account </h5>
+          </div ></div>
         <div
           className="card-scroll"
           style={{ height: "407px", overflowY: "scroll" }}
         >
           {userDetails?.users?.map((user) => (
-            
             <div
-              onClick={() => handleClick(user?.id)}
-              className="user"
-              key={user.id}
+            onClick={() => handleClick(user?.id)}
+            className="user"
+            key={user.id}
             >
               <img src={user?.profilepicture} alt={user.name} />
               <div className="user-name text-dark"><h6 className="username">{user.name}</h6></div>

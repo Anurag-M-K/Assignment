@@ -14,10 +14,10 @@ const sidebar = () => {
               color: "#ddd",
             }}
           >
-            <h6 className=" py-3 text-light"> Profile</h6>
+            <h6 className=" py-3 text-light sidebar-tabs" > Profile</h6>
           </Link>
         </div>
-        <div className="line"></div>
+        <div className="line bg-light"></div>
         <div>
           <Link
             style={{
@@ -26,10 +26,10 @@ const sidebar = () => {
             }}
             to="/posts"
           >
-            <h6 className=" py-3 text-light"> Posts</h6>
+            <h6 className=" py-3 text-light sidebar-tabs"> Posts</h6>
           </Link>
         </div>
-        <div className="line"></div>
+        <div className="line bg-light"></div>
         <div>
           <Link
             style={{
@@ -38,10 +38,10 @@ const sidebar = () => {
             }}
             to="/gallery"
           >
-            <h6 className=" text-light py-3"> Gallary</h6>
+            <h6 className=" text-light py-3 sidebar-tabs"> Gallary</h6>
           </Link>
         </div>
-        <div className="line"></div>
+        <div className="line bg-light"></div>
         <div>
           <Link
             style={{
@@ -50,7 +50,7 @@ const sidebar = () => {
             }}
             to="/todo"
           >
-            <h6 className=" py-3 text-light"> To-Do</h6>
+            <h6 className=" py-3 text-light sidebar-tabs"> To-Do</h6>
           </Link>
         </div>
       </div>

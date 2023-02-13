@@ -14,22 +14,21 @@ function TodoPage() {
       <div className="col-md-9">
         <Header />
         <div className="coming-soon">
+              <div className="chat-btn">
+        
+        <ChatCard/>
+        </div>
           <h1
             style={{
-              marginTop: "14%",
               fontWeight: "bold",
               color: "#dddd",
               fontSize: "70px",
-              marginRight: "200px",
+              
             }}
           >
             Coming soon
           </h1>
         </div>
-      <div className="chat-btn">
-
-<ChatCard/>
-</div>
       </div>
 
     </div>

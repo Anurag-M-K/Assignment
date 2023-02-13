@@ -6,7 +6,6 @@ import { setMessageCard } from "../redux/features/privateCardStateSlice";
 import { setPrivateChat } from "../redux/features/privateChatSlice";
 import { setUserDetails } from "../redux/features/usersSlice";
 import { IoChatboxOutline } from "react-icons/io5";
-import { IoChevronDown } from "react-icons/io5";
 import "./Css/ChatCard.css";
 
 const ChatCard = () => {
@@ -16,6 +15,9 @@ const ChatCard = () => {
   const [ visible , setVisible ] = useState(false);
   const [ privateTab , setPrivateTab ] = useState(true)
   const { loginUserDetails } = useSelector((state) => state.user);
+
+
+
   useEffect(() => {
     const getUserData = async () => {
       const data = await axios.get("https://panorbit.in/api/users.json");
@@ -24,6 +26,8 @@ const ChatCard = () => {
     };
     getUserData();
   }, []);
+
+  
 
   const { userDetails } = useSelector((state) => state.users);
 
@@ -55,15 +59,20 @@ const ChatCard = () => {
   
   return (
     <>
-    {}
+    
       <div className="chat-card-container">
         {visible ? (
           <div className="chat-card">
             <div
               onClick={handleClick}
-              className="chat-card-heading bg-primary text-light  "
+              className="chat-card-heading  text-light  "
             >
-              <button className="btn btn-primary btn-chat text-start ">{<IoChatboxOutline className="me-2"  />}Chats</button>
+              <button className="btn btn-primary btn-chat text-start " style={{
+                borderBottomRightRadius: "0px",
+                borderBottomLeftRadius: "0px" ,
+                borderTopLeftRadius: "2px",
+                width:"100%"
+              }}>{<IoChatboxOutline className="me-2"  />}Chats</button>
             </div>
             <div
               className="chat-card-scroll"
@@ -79,9 +88,9 @@ const ChatCard = () => {
           </div>
         ) : (
           <div className="btn-card-visible" >
-            <button className="btn btn-primary " onClick={showCard}>
-              Chats
-            </button>
+            <div className="btn btn-primary " onClick={showCard}>{<IoChatboxOutline style={{marginRight:"10px",    marginLeft: "-109px"}}  />}
+              Chats  
+            </div>
           </div>
         )}
       </div>

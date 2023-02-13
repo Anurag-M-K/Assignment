@@ -3,7 +3,8 @@ import Header from "../Components/Header";
 import Sidebar from "../Components/Sidebar";
 import { useSelector  } from "react-redux";
 import ChatCard from "../Components/ChatCard";
-import "../Components/Css/Gallery.css";
+import "./css/GalleryPage.css";
+
 
 function GalleryPage() {
 
@@ -18,24 +19,23 @@ function GalleryPage() {
       <div className="col-md-9">
         <Header />
         <div className="coming-soon">
+              <div className="chat-btn">
+        
+                <ChatCard />
+                
+              </div>
+               
           <h1
             style={{
-              marginTop: "14%",
               fontWeight: "bold",
               color: "#dddd",
               fontSize: "70px",
-              marginRight: "200px",
             }}
           >
             Coming soon
 
           </h1>
         </div>
-      <div className="chat-btn">
-
-        <ChatCard/>
-      </div>
-       
 
       </div>
     

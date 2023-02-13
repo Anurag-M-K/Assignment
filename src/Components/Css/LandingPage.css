@@ -6,24 +6,28 @@
     
     height: 100vh;
   }
-  
+ 
   .cards {
     width: 50%;
-    max-width: 500px;
+    max-width: 572px;
     min-width: 400px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 35px;
-    padding: 20px;
     text-align: center;
-    margin-top: -50%;
-    /* height: 20rem; */
+    margin-top: -65%;
+    padding-bottom: 16px;
   }
   
   .card-heading {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 20px;
+    background: #f6f6f6;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    height: 10vh;
+    color: black;
   }
   
   
@@ -49,3 +53,11 @@
     color: black;
     margin-left: 0;
   }
+  .top-header{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+  }
+  

@@ -15,7 +15,7 @@ const ChatCard = () => {
   const [ visible , setVisible ] = useState(false);
   const [ privateTab , setPrivateTab ] = useState(true)
   const { loginUserDetails } = useSelector((state) => state.user);
-
+ 
 
 
   useEffect(() => {

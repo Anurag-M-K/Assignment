@@ -17,7 +17,6 @@ const ChatCard = () => {
   const { loginUserDetails } = useSelector((state) => state.user);
  
 
-
   useEffect(() => {
     const getUserData = async () => {
       const data = await axios.get("https://panorbit.in/api/users.json");

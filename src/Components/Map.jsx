@@ -30,19 +30,11 @@ function Map() {
       </GoogleMap>
       <div className="latLong">
         <p>
-          Lat {loginUserDetails?.address?.geo?.lat} Long{" "}
+          Lat {loginUserDetails?.address?.geo?.lat} Long{" "}{loginUserDetails?.address?.geo?.lat}
           {loginUserDetails?.address?.geo?.lng}
         </p>
-        <p></p>
       </div>
-    <div className="col md-3" style={{marginLeft:"370 px",flexDirection:"row"}}>
-    <div
-            
-              className="user"
-            >
-              <div className="user-name text-dark"><h6 className="username"></h6></div>
-            </div>
-    </div>
+
     </>
   );
 }

@@ -6,7 +6,7 @@
 }
 .latLong{
     flex-direction: column;
-    margin-left: 65vh;
+    margin-left: 50vh       ;
 }
 .loading{
     display: flex;
